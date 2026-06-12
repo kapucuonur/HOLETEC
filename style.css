@@ -351,9 +351,9 @@ ul { list-style: none; }
 }
 .hero__bg { position: absolute; inset: 0; }
 @keyframes kenBurns {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.15) translate(-2%, -1%); }
+  100% { transform: scale(1) translate(0, 0); }
 }
 
 .hero__bg-img {
@@ -361,7 +361,8 @@ ul { list-style: none; }
   object-fit: cover;
   object-position: center;
   filter: brightness(0.7) saturate(0.8);
-  animation: kenBurns 40s ease-in-out infinite;
+  animation: kenBurns 20s ease-in-out infinite;
+  transform-origin: center;
 }
 .hero__overlay {
   position: absolute; inset: 0;
